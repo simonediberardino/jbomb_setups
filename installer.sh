@@ -9,7 +9,7 @@ fi
 
 # Set variables
 REPO_URL_JBOMB="https://github.com/simonediberardino/BomberMan/releases/latest/download/JBomb.jar"
-REPO_URL_UPDATER="https://github.com/simonediberardino/jbomb_setups/releases/latest/download/updater.sh"
+REPO_URL_UPDATER="https://raw.githubusercontent.com/simonediberardino/jbomb_setups/main/updater.sh"
 INSTALL_DIR="/usr/local/bin/jbomb"
 FILENAME_JBOMB="JBomb.jar"
 FILENAME_UPDATER="updater.sh"
