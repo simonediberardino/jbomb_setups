@@ -8,7 +8,7 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 # Set variables
-REPO_URL="https://github.com/simonediberardino/jbomb_setups/releases/latest/download/JBomb.jar"
+REPO_URL="https://github.com/simonediberardino/BomberMan/releases/latest/download/JBomb.jar"
 FILENAME="bin/JBomb.jar"
 
 # Create the bin directory if it doesn't exist
