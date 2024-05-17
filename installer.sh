@@ -11,13 +11,19 @@ fi
 REPO_URL_JBOMB="https://github.com/simonediberardino/BomberMan/releases/latest/download/JBomb.jar"
 REPO_URL_UPDATER="https://raw.githubusercontent.com/simonediberardino/jbomb_setups/main/updater.sh"
 INSTALL_DIR="/usr/local/bin/jbomb"
-FILENAME_JBOMB="JBomb.jar"
+INSTALL_DIR_BIN="$INSTALL_DIR/bin"
+FILENAME_JBOMB="bin/JBomb.jar"
 FILENAME_UPDATER="updater.sh"
-DESKTOP_LINK="$HOME/Desktop/JBomb"
+DESKTOP_LINK="$HOME/JBomb"
 
 # Create the installation directory if it doesn't exist
 if [ ! -d "$INSTALL_DIR" ]; then
     mkdir -p "$INSTALL_DIR"
+fi
+
+# Create the installation directory bin if it doesn't exist
+if [ ! -d "$INSTALL_DIR_BIN" ]; then
+    mkdir -p "$INSTALL_DIR_BIN"
 fi
 
 # Display ASCII art bomb
