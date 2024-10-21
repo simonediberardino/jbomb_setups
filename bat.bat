@@ -79,7 +79,6 @@ goto :EOF
 
 :::::::::::::::::::::::::::::::::::::::::
 :createShortcut
-echo Creating a shortcut on the desktop...
 goto :EOF
 
 :end
