@@ -3,10 +3,17 @@ setlocal
 
 :: Set variables
 set "javaInstaller=https://javadl.oracle.com/webapps/download/AutoDL?BundleId=236886_42970487e3af4f5aa5bca3f542482c60"
-set "jbombJarUrl=https://raw.githubusercontent.com/simonediberardino/jbomb_setups/main/jbomblauncher.jar"
+set "owner=simonediberardino"
+set "repo=JBombLauncher"
+set "fileName=JBombLauncher.jar"
+set "jbombJarUrl=https://github.com/%owner%/%repo%/releases/latest/download/%fileName%"
 set "jbombDir=C:\Program Files\jbomb"
-set "jbombJar=%jbombDir%\jbomblauncher.jar"
-set "installer=jdk8.exe"
+set "jbombJar=%jbombDir%\%fileName%"
+set "tempDir=%TEMP%\jbomb_temp"
+set "installer=%tempDir%\jdk8.exe"
+
+:: Create temporary directory
+mkdir "%tempDir%" 2>NUL
 
 :: Check for installed Java version
 where java 2>NUL
@@ -23,7 +30,7 @@ goto :checkJBomb
 :installJava
 echo Downloading Java installer...
 
-:: Use curl to download the Java installer
+:: Use curl to download the Java installer to the temporary directory
 curl -o "%installer%" -L "%javaInstaller%"
 
 if exist "%installer%" (
